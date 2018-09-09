@@ -205,30 +205,164 @@ A.  The heap is the run-time data area from which memory for all class instances
     place where all objects stays during run time. It is part of RAM.
 
 How java manage it's memory?
+A.  All the primitive variables and reference variable stays in stack. Heap contains the objects. Main methods executes
+    on stack. during the process of execution when a object lost his reference variable which is being erased from the
+    stack after completion of execution is waits for the Java automatic garbage collector, and object without no
+    reference variable being removed from heap by garbage collector.
+
 What is the difference between String, StringBuffer and StringBuilder?
+A.  String is immutable, if you try to alter their values, another object getscreated, whereas StringBuffer and
+    StringBuilder are mutable so they can change their values.StringBuffer methods are synchronized while StringBuilder
+    methods are non-synchronized, it means that for thread-safe operations you must choose StringBuffer class instead
+    of StringBuilder.
+
 What is Singleton class?
+A.  The purpose of singleton is to control object creation by keeping private constructor. Singleton pattern helps us to
+    keep only one instance of a class at any time.We can make constructor as private. So that user can not create an
+    object from outside of the class.
+
 What is Serialization and Deserialization?
-when to use transient variable in java?
+A.  Serialization: It is a process of converting an object into a sequence of bytes which can be persisted to a disk or
+    database or can be sent through streams.
+    Deserialization: The reverse process of creating object from sequence of bytes is called deserialization.
+
+When to use transient variable in java?
+A.  If user wants to skip any variable from Serialization and Deserialization on that time we can use transient variable.
+
 Difference between while and do..while loop?
+A.  Only difference between these two loops is that, in while loops, test expression is checked at first but, in
+    do...while loop code is executed at first then the condition is checked. So, the code are executed at least once in
+    do...while loops.
+
 What is Enum?
+A.  Enum is a special Java type used to define collections of constants.
+
 What is Iterator?
+A.  An iterator is an Interface. Iterator takes the place of Enumeration in the Java Collections Framework.
+
 Which one will take more memory, an int or Integer?
+A.  An int shall take 4 bytes and Integer shall take about 16 bytes space in heap.Integer are wrapper class which has
+    more overhead compared to primitive type. The memory space consumption by object depends upon JVM during run time
+    environment. For a object this space varies.
+
 Why is String Immutable in Java?
+A.  Security: parameters are typically represented as String in network connections, database connection urls,
+    username/password etc. If it were mutable, these parameters could be easily changed.
+    Synchronization and concurrency: making String immutable automatically makes them thread safe thereby solving the
+    synchronization issues.
+    Caching: when compiler optimizes your String objects, it sees that if two objects have same value
+    (a="test", and b="test") and thus you need only one string object (for both a and b, these two will point to the
+    same object).
+    Class loading: String is used as arguments for class loading. If mutable, it could result in wrong class being loaded
+    (because mutable objects change their state).
+
 What is constructor chaining in Java?
+A.  Constructor chaining is the process of calling one constructor from another constructor with respect to current
+    object. Constructor chaining can be done in two ways:
+    Within same class: It can be done using this() keyword for constructors in same class
+    From base class: by using super() keyword to call constructor from the base class.
+    Constructor chaining occurs through inheritance.
+
 The difference between Serial and Parallel Garbage Collector?
+A.  The serial collector uses a single thread to perform all garbage collection work, which is more efficient because of
+    no communication overhead between threads. It is best suited to single processor machines.
+    Parallel collctor performs minor collections in parallel, which can significantly reduce garbage collection. It is
+    intended for applications with medium-size to large sized data sets that are run on multiprocessor and multi
+    threaded hardware.
+
 What is JIT stands for?
+A.  The Just-In-Time (JIT) compiler is a component of the Java™ Runtime Environment that improves the performance of
+    Java applications at run time.
+    The JIT compiler helps improve the performance of Java programs by compiling bytecodes into native machine code
+    at run time. The JIT compiler is enabled by default, and is activated when a Java method is called.
+
 Explain Java Heap space and Garbage collection?
+A.  Heap space: At run-time the Java instances are stored in the heap memory area. When an object is not referenced
+    anymore it becomes eligible for removal from heap memory.During garbage collection process, those objects are
+    removed from heap memory and the space is reclaimed.
+    Heap memory has three major areas
+     1. Young Generation
+        a. Eden Space (any instance enters the runtime memory area through eden)
+        b. S0 Survivor Space (older instances moved from eden to S0)
+        c. S1 Survivor Space (older instances moved from S0 to S1)
+     2. Old Generation (instances promoted from S1 to tenured)
+     3. Permanent Generation (contains meta information like class, method detail)
+    Garbage Connection:Java garbage collection is an automatic process to manage the runtime memory used by programs.
+    Garbage connection of JAVA application is done by Garbage collector.
+    A garbage collector performs automatic dynamic memory management through the following operations:
+     1. It allocates from and gives back memory to the operating system.
+     2. Allocate memory to the application as it requests it.
+     3. Determines which parts of that memory is still in use by the application.
+     4. Reclaims the unused memory for reuse by the application. An object is considered garbage and its memory can be
+        reused by the VM when it can no longer be reached from any reference of any other live object in the running
+        program.
+
 Can you guarantee the garbage collection process?
+A.  No it is not guaranteed process. Reason is as follows:
+    Being an automatic process, programmers need not initiate the garbage collection process explicitly in the code.
+    System.gc() and Runtime.gc() are hooks to request the JVM to initiate the garbage collection process.
+
+    Though this request mechanism provides an opportunity for the programmer to initiate the process but the onus
+    is on the JVM. It can choose to reject the request and so it is not guaranteed that these calls will do the
+    garbage collection. This decision is taken by the JVM based on the eden space availability in heap memory.
+    The JVM specification leaves this choice to the implementation and so these details are implementation specific.
+    Undoubtedly we know that the garbage collection process cannot be forced.
+
 What is the difference between stack and heap in Java?
+A.  Heap and Stack are part of JVM but they are used for different purposes. Differences are as follows:
+    1. Size: Heap space in Java is much bigger than the Stack memory.
+    2. Resizing: JVM allows to resize both heap and stack, but need to use different JVM flags for that.
+    3. Usage: Heap memory is used to store objects, no mater where u created that object. Stack memory is used to store
+       primitive variables and reference variables, method frames and call stack.
+    4. Visibility: Heap memory is shared by all threads hence it is also known as the main memory but stack memory is
+       local to threads and local variable created there was not visible to others.
+    5. Order: Heap is a large memory area where objects can be created and stored in any order but Stack memory is
+       structured as Stack data structure i.e. LIFO where method calls are stored as last in first out order.
+    6. Error Type: When heap and stack memory are filled different error are being generated.
+
 What is reflection in java and why is it useful?
+A.  Reflection is a feature in the Java programming language. It allows an executing Java program to examine or
+    "introspect" upon itself, and manipulate internal properties of the program.
+    Java Reflection is quite powerful and can be very useful. Java Reflection makes it possible to inspect classes,
+    interfaces, fields and methods at runtime, without knowing the names of the classes, methods etc.
+
 what is multithreading in java?
+A.  Multithreading in java is a process of executing multiple threads simultaneously. A thread is a lightweight
+    sub-process, the smallest unit of processing. Multiprocessing and multithreading, both are used to achieve
+    multitasking.
+
 What is the use of synchronization in Java?
+A.  Synchronized keyword in Java is used to provide mutually exclusive access to a shared resource with multiple threads
+    in Java. Synchronization in Java guarantees that no two threads can execute a synchronized method which requires the
+    same lock simultaneously or concurrently.
+
 What is Framework?
+A.  Frameworks are large bodies (usually many classes) of prewritten code to which you add your own code to solve a
+    problem in a specific domain.
+
 What are the testing Framework available in java?
+A.  JUnit, TestNG  etc.
+
 Difference between jUnit and testNG?
+A.  Major difference in TestNG and JUnit test frameworks is their scope. TestNG is more advance in parameterize testing,
+    dependency testing and suite testing (Grouping concept). TestNG is meant for high-level testing and complex
+    integration test.
+
 What are the dependencies for this project?
+A.  1.mongo-java-driver-3.4.0.jar
+    2.mysql-connector-java-5.1.41-bin.jar
+    3.testng-6.8.7.jar
+
 what is dependency injection in java?
+A.  The general concept behind dependency injection is called Inversion of Control. According to this concept a class
+    should not configure its dependencies statically but should be configured from the outside. A Java class has a
+    dependency on another class, if it uses an instance of this class. We call this a _class dependency. For example, a
+    class which accesses a logger service has a dependency on this service class.
+
 What is static binding and dynamic binding?
+A.  Static binding in Java occurs during compile time while dynamic binding occurs during runtime. private , final and
+    static methods and variables use static binding and are bonded by compiler while virtual methods are bonded during
+    runtime based upon runtime object.
 
 
 
