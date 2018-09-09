@@ -70,7 +70,7 @@ A. No we can not create object in Interface and Abstract class. Interface contai
    abstract method. later abstract class can be extended and create and concrete class where there will be no abstract
    methods.
 
-what is Access Specifier?
+What is Access Specifier?
 A.  Access Specifier is to determine the visibility of methods and variables. What is OOP ? Define each feature of java
     OOP.
 
@@ -132,23 +132,78 @@ Explain exceptions in java and how to handle it.
 A. The term exception is shorthand for the phrase "exceptional event."An exception is an event, which occurs during the
    execution of a program, that disrupts the normal flow of the program's instructions.
 
-What is static keyword in java? How it has been used in variables and methods ?
+What is static keyword in java? How it has been used in variables and methods?
+A.  The he static keyword denotes that a member variable, or method, can be accessed without requiring an instantiation
+    of the class to which it belongswhen static key word is used with a method that method can be called without creating
+    a object.
 
 What is final and how it has been used variables and methods?
+A.  A final class cannot be subclassed. A final variable can only be initialized once. A final method cannot be
+    overridden by subclasses.
+
 What is final, finally and finalize?
-What is a constructor ?
+A.  Final: Final variables are nothing but constants. We cannot change the value of a final variable once it is initialized.
+    A final method cannot be overridden. Which means even though a sub class can call the final method of parent class
+    without any issues but it cannot override it.
+    Finally: Finally key word used to execute finally block when the try and catch block exits which ensures that the
+    finally block is executed even if an unexpected exception occurs.
+    Finalize(): Called by the garbage collector on an object when garbage collection determines that there are no more
+    references to the object.
+
+What is a constructor?
+A.  Constructor is being used to instantiate a object by using new operator. It is an instance method with the same name
+    of their class.
+
 Can we have multiple constructors in a class?
+A.  Yes.
+
 If we don't have a constructor declared, what is called during the object creation?
-What is "this" keyword in java ?
+A.  create an object from a class.
+
+What is "this" keyword in java?
+A.  this key word represents instance of the class. this can be used to access class methods and variables.
+
 What is "super" keyword in java? How many possible way can you use?
-What is JVM stand for ?
+A.  super key word used for accessing the members of the super class by the extended class.
+
+What is JVM stand for?
+A. Java Virtual Machine
+
 Is JVM platform independent?
+A.  The JVM must be platform dependent to allow your Java to run on the specific platform. A JVM for Windows will
+    translate your Java into different system calls than a JVM for OS X. No, JVMs are not platform independent. In fact
+    they are platform specific run time environment provided by the vendor.
+
 What version of java are you using?
-What is JAR stand for ?
+A.  java version "10.0.2" 2018-07-17
+    Java(TM) SE Runtime Environment 18.3 (build 10.0.2+13)
+    Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.2+13, mixed mode)
+
+What is JAR stand for?
+A.  Java Archive is a platform independent file format that holds many files into one. Multiple applets written in the
+    Java Programming language and their components like .class files, images, sounds and other resource files can be
+    bundled in a JAR file and downloadable in a single HTTP transaction. It supports file compression and digital
+    signatures.
+
 What is the difference between JDK and JVM?
+A.  JDK is an acronym for Java Development Kit.It physically exists.It contains JRE + development tools.
+    JVM (Java Virtual Machine) is an abstract machine. It is a specification that provides runtime environment in which
+    java bytecode can be executed.
+
 What is the difference between JVM and JRE?
+A.  JVM (Java Virtual Machine) is an abstract machine. It is a specification that provides runtime environment in which
+    java bytecode can be executed.
+    JRE is an acronym for Java Runtime Environment.It is used to provide runtime environment.It is the implementation
+    of JVM.It physically exists.It contains set of libraries + other files that JVM uses at runtime.
+
 What is compile time and run time?
+A. Java compile the .java file to .class file, this stage is called compile time. java loader loads the .class file in
+    JVM and JVM executes the application. This execution time of a application is called run time.
+
 What is heap?
+A.  The heap is the run-time data area from which memory for all class instances and arrays is allocated. Heap is the
+    place where all objects stays during run time. It is part of RAM.
+
 How java manage it's memory?
 What is the difference between String, StringBuffer and StringBuilder?
 What is Singleton class?
