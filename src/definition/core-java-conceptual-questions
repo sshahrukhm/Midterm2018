@@ -57,16 +57,83 @@ A.  The main difference between path and classpath is that path is an environmen
     load compile Java bytecodes stored in the .class file
 
 What is the difference between an Interface and Abstract class?
-A.
+A.  A class that contains one or more abstract methods , and therefore can never be instantiated. Abstract classes are
+    defined so that other classes can extend them and make them concrete by implementing the abstract methods.
+    An interface in the Java programming language is an abstract type that is used to specify a behaviour that classes
+    must implement.
+    Interfaces are declared using the interface keyword, and may only contain method signature and constant declarations
+    (variable declarations that are declared to be both static and final).
+
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+A. No we can not create object in Interface and Abstract class. Interface contains methods to be implemented, in
+   abstract class we can implement some of them and can create more new methods as required keeping at least one
+   abstract method. later abstract class can be extended and create and concrete class where there will be no abstract
+   methods.
+
 what is Access Specifier?
+A.  Access Specifier is to determine the visibility of methods and variables. What is OOP ? Define each feature of java
+    OOP.
+
 What is OOP ? Define each feature of java OOP.
+A. OOP. stands for "Object-Oriented Programming." Refers to a programming methodology based on objects, instead of just
+   functions and procedures. These objects are organized into classes, which allow individual objects to be group
+   together.
+     Features of java OOP:
+     1. Encapsulation
+     2. Inheritance
+     3. Polymorphism
+     4. Abstraction
+
+     1. Encapsulation: Encapsulation means data hiding. By doing encapsulation data can only be be accessed by public
+        methods.  There are various way to hide the data. By making a method, variable private access limits to the
+        class user. By using getter and setter method private data can be accessed, hiding implementation of methods and
+        data from user is called encapsulation. from the users. It improves maintainability and flexibility and
+        re-usability. The fields can be made read-only User would not be knowing what is going on behind the scene. They
+        would only be knowing that to update a field call set method and to read a field call get method but what these
+        set and get methods are doing is purely hidden from them.
+
+     2. Inheritance: Inheritance refers to a feature of Java programming that lets you create classes that are derived
+        from other classes. A class that's based on another class inherits the other class. The class that is inherited
+        is the parent class, the base class, or the superclass.
+
+     3. Polymorphism: Polymorphism is the ability of an object to take on many forms. The most common use of
+        polymorphism in OOP occurs when a parent class reference is used to refer to a child class object. Any Java
+        object that can pass more than one IS-A test is considered to be polymorphic. Polymorphism in Java has two
+        types:
+      a. Compile time polymorphism (static binding):It happens during compile time.
+         Example: Method overloading is an example of static polymorphism,
+      b. Runtime polymorphism (dynamic binding): It happens during run time.
+         Example: Method overriding is an example of dynamic polymorphism.
+
+     4. Abstraction: Abstraction in Java or Object oriented programming is a way to segregate implementation from an
+        interface and one of the five fundamentals along with Encapsulation, Inheritance, Polymorphism, Class, and Object.
+        Abstraction in Java is achieved by  using interface and abstract class in Java. An interface or abstract class
+        is something which is not concrete , something which is incomplete. In order to use interface or abstract class,
+        we need to extend and implement an abstract method with concrete behavior.
+
 What is Java Package and which package is imported by default?
+A.  A package is a namespace that organizes a set of related classes and interfaces. java.lang package is imported by
+    default, no need to explicitly import it. Classes in the java.lang package do not need to be imported
+    (the compiler acts like they are always imported).
+
 What is API? Name list of API that you have used so far.
+A.  An application program interface (API) is a set of routines, protocols, and tools for building software applications.
+    Basically, an API specifies how software components should interact. Additionally, APIs are used when programming
+    graphical user interface (GUI) components. A good API makes it easier to develop a program by providing all the
+    building blocks. A programmer then puts the blocks together.
+
 Does java support multiple inheritance, explain why or why not?
+A.  No Java doesn’t allow multiple inheritance.
+
 What is method overloading and when it happens?
+A.  When same method takes different signature it is called method overloading it happen within class.
+
 Explain exceptions in java and how to handle it.
+A. The term exception is shorthand for the phrase "exceptional event."An exception is an event, which occurs during the
+   execution of a program, that disrupts the normal flow of the program's instructions.
+
 What is static keyword in java? How it has been used in variables and methods ?
+
 What is final and how it has been used variables and methods?
 What is final, finally and finalize?
 What is a constructor ?

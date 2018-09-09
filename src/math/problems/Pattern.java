@@ -11,17 +11,17 @@ public class Pattern {
          *
          *
          */
-        int count = 1, j = 0;
+        int count = 1, x = 0;
         int num = 100;
         List<String> storePattern = new ArrayList<String>();
         int[] array1 = new int[40];
 
         while (num > 0) {
-            for (int i = 0; i < 10; i++) {
+            for (int y = 0; y < 10; y++) {
                 System.out.print(" " + num);
-                array1[j] = num;
+                array1[y] = num;
                 num -= count;
-                j++;
+                y++;
 
             }
             count++;
