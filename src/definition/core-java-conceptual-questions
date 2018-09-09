@@ -26,8 +26,16 @@ A.  An IDE stands Integrated Development Environment is a software suite that co
     that the developer accesses through a single graphical user interface (GUI).
 
 What are the IDEs available in the market to support java?
+A.   Eclipse, Intellij Idea, NetBeans, AndroidStudio, Enide Studio 2014, BlueJ, jEdit, jGRASP, JSource, JDeveloper, etc.
+
 Explain the entire java life cycle.
-what is class?
+A.  Programmer use any text editor to create high level Java text file.This file is saved as a .java file on the disk.
+    Then compile this text file using the Java compiler, which result in a .classfile being created on the disk.
+    The .class file contains the bytecodes.
+
+What is class?
+A.
+
 What is object?
 What is the entry point of an application?
 Why main is static?
