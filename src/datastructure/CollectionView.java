@@ -1,11 +1,11 @@
 package datastructure;
 
-import java.util.Collection;
+import java.util.*;
 import java.util.HashMap;
 
 public class CollectionView {
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
         /*
          Map is created and inserted some data.Retrieve the Collection view of values present in map
          */
@@ -16,6 +16,14 @@ public static void main(String[] args) {
         map.put(4, "Boston");
         map.put(5, "San Jose");
         map.put(5, "Seattle");
+        Map checkMap = Collections.checkedMap(map, Integer.class, String.class);
+        System.out.println("Checked map content: " + checkMap);
+        Iterator<Integer> it = checkMap.keySet().iterator();
+        while (it.hasNext()) {
+            Integer key = it.next();
+            String value = (String) checkMap.get(key);
+            System.out.println(key + " " + value);
+        }
 
 
     }
