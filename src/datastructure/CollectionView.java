@@ -15,17 +15,11 @@ public class CollectionView {
         map.put(3, "Denver");
         map.put(4, "Boston");
         map.put(5, "San Jose");
-        map.put(5, "Seattle");
-        Map checkMap = Collections.checkedMap(map, Integer.class, String.class);
-        System.out.println("Checked map content: " + checkMap);
-        Iterator<Integer> it = checkMap.keySet().iterator();
-        while (it.hasNext()) {
-            Integer key = it.next();
-            String value = (String) checkMap.get(key);
-            System.out.println(key + " " + value);
+        map.put(6, "Seattle");
+
+        for(Map.Entry<Integer,String> USA:map.entrySet()){
+            System.out.println("Collection View is-"+USA.getKey()+":"+USA.getValue());
         }
-
-
     }
 
 }
