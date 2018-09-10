@@ -40,8 +40,6 @@ public class DataReader {
         } catch (Exception ex) {
             System.out.println("Your data is not there .");
         }
-
     }
-
 }
 
