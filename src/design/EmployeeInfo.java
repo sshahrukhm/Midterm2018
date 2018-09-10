@@ -135,26 +135,20 @@ public class EmployeeInfo {
         return 0;
     }
 
-
     public String employeeName() {
         return null;
     }
 
-
     public void assignDepartment() {
 
     }
-
-
     public int calculateSalary() {
         return 0;
     }
 
-
     public void benefitLayout() {
 
     }
-
     private static class DateConversion {
 
         public DateConversion(Months months) {

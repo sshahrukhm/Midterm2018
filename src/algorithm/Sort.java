@@ -54,7 +54,6 @@ public class Sort {
             }
         }
 
-
         final long endTime = System.currentTimeMillis();
         final long executionTime = endTime - startTime;
         this.executionTime = executionTime;
@@ -118,7 +117,6 @@ public class Sort {
             k++;
         }
     }
-
 
     public int[] mergeSort(int[] array, int firstIndex, int lastIndex) {
         final long startTime = System.currentTimeMillis();
