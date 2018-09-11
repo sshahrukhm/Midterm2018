@@ -83,12 +83,12 @@ public class EmployeeInfo extends AbstractEmployee implements Employee{
     public static double calculateEmployeePension(int salary){
         double total=0;
         Scanner sc  = new Scanner(System.in);
-        System.out.println("Please enter start date in format (example: January,2007): ");
+        System.out.println("Please enter start date in format (example: May,2015): ");
         String joiningDate = sc.nextLine();
-        System.out.println("Please enter today's date in format (example: September,2018): ");
-        String todayDate = sc.nextLine();
+        System.out.println("Please enter today's date in format (example: August,2017): ");
+        String todaysDate = sc.nextLine();
         String convertedJoiningDate = DateConversion.convertDate(joiningDate);
-        String convertedTodaysDate = DateConversion.convertDate(todayDate);
+        String convertedTodaysDate = DateConversion.convertDate(todaysDate);
 
         //implement numbers of year from above two dates
 

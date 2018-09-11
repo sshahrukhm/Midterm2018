@@ -22,10 +22,10 @@ public class FortuneEmployee {
         EmployeeInfo employee2 = new EmployeeInfo("Momo",21);
         EmployeeInfo employee3 = new EmployeeInfo("John",32,12);
 
-        employee1.setName("Mo");
+        employee1.setName("Alexa");
         System.out.println(employee1.getName());
 
-        employee2.setName("Money");
+        employee2.setName("Siri");
         System.out.println(employee2.getName());
 
 
@@ -33,6 +33,6 @@ public class FortuneEmployee {
         EmployeeInfo.calculateEmployeePension(50000);
 
         ConnectToSqlDB connection = new ConnectToSqlDB();
-        connection.insertProfileToSqlTable("employees","column1","column2");
+        connection.insertDataFromStringToSqlTable("employees","column1","column2");
     }
 }
