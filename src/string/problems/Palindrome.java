@@ -4,15 +4,15 @@ public class Palindrome {
     public static boolean isPalindrome(String string) {
 
         String word = string;
-        StringBuilder palindrom = new StringBuilder();
+        StringBuilder palindrome = new StringBuilder();
         int wordLength = word.length();
 
         for (int i = 0; i < wordLength; i++) {
-            palindrom.append(word.charAt(wordLength - 1 - i));
+            palindrome.append(word.charAt(wordLength - 1 - i));
         }
-        String revPalindrom = new String(palindrom);
+        String revPalindrome = new String(palindrome);
 
-        if (word.matches(revPalindrom)) return true;
+        if (word.matches(revPalindrome)) return true;
         else return false;
     }
 
